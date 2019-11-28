@@ -1,0 +1,47 @@
+{
+    "name": "jest-verify-node-version",
+    "version": "0.0.0",
+    "description": "WIthin Jest Setup, verify node version",
+    "main": "./dist",
+    "scripts": {
+        "test": "jest --passWithNoTests",
+        "format": "prettier --write '**/*.md' './*.{js,json}' './src/**/*.ts' './test/**/*.ts'",
+        "build": "tsc --project .",
+        "lint": "tslint --fix --project ./tsconfig.json",
+        "prebuild": "rimraf ./dist",
+        "prelint": "npm run format"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrlannigan/jest-verify-node-version.git"
+    },
+    "keywords": [
+        "jest",
+        "node",
+        "version",
+        "verify",
+        "global",
+        "setup"
+    ],
+    "author": "Julian Lannigan <julian.lannigan@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mrlannigan/jest-verify-node-version/issues"
+    },
+    "homepage": "https://github.com/mrlannigan/jest-verify-node-version#readme",
+    "dependencies": {
+        "semver": "^6.3.0"
+    },
+    "devDependencies": {
+        "@schemastore/package": "0.0.5",
+        "@types/jest": "^24.0.23",
+        "@types/node": "^12.12.14",
+        "@types/semver": "^6.2.0",
+        "jest": "^24.9.0",
+        "prettier": "^1.19.1",
+        "rimraf": "^3.0.0",
+        "ts-jest": "^24.2.0",
+        "tslint": "^5.20.1",
+        "typescript": "^3.7.2"
+    }
+}

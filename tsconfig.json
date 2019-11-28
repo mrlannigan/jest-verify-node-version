@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "lib": ["es6"],
+        "target": "es3",
+        "types": ["jest", "node", "@schemastore/package", "semver"]
+    },
+    "files": ["src/index.ts"]
+}
