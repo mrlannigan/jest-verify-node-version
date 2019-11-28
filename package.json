@@ -1,6 +1,6 @@
 {
     "name": "jest-verify-node-version",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "WIthin Jest Setup, verify node version",
     "main": "./dist",
     "scripts": {
