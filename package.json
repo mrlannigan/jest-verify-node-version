@@ -1,7 +1,7 @@
 {
     "name": "jest-verify-node-version",
     "version": "1.0.0",
-    "description": "WIthin Jest Setup, verify node version",
+    "description": "Within Jest Setup, verify node version",
     "main": "./dist",
     "scripts": {
         "test": "jest --passWithNoTests",
