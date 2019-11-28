@@ -38,7 +38,7 @@ If the node version doesn't satisfy the engine node version range and `doNotThro
 ```shell
 $ npm test
 
-> example-module@1.0.0 test:jest /Users/julian/dev/example-module
+> example-module@1.0.0 test /Users/julian/dev/example-module
 > jest
 
 Error: node version v10.16.3, does not satisfy engine requirement of >=12.13.0
