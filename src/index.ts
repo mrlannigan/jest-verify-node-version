@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import semver from 'semver';
 
-export function check(incomingPackageJson?: JSONSchemaForNPMPackageJsonFiles) {
+export function check(incomingPackageJson?: JSONSchemaForNPMPackageJsonFiles, doNotThrow: boolean = false): boolean {
     const nodeVersion: string = process.version;
 
     let packageJson: JSONSchemaForNPMPackageJsonFiles = incomingPackageJson;
@@ -26,7 +26,12 @@ export function check(incomingPackageJson?: JSONSchemaForNPMPackageJsonFiles) {
     if (packageJson.engines && packageJson.engines.node) {
         const engineReq: string = packageJson.engines.node;
         if (!semver.satisfies(nodeVersion, engineReq)) {
-            throw new Error(`node version ${nodeVersion}, does not satisfy engine requirement of ${engineReq}`);
+            if (!doNotThrow) {
+                throw new Error(`node version ${nodeVersion}, does not satisfy engine requirement of ${engineReq}`);
+            }
+
+            return false;
         }
     }
+    return true;
 }
