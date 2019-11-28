@@ -33,3 +33,13 @@ module.exports = async () => {
     check();
 };
 ```
+
+If the node version doesn't satisfy the engine node version range and `doNotThrow` is not true, then the `check` function will throw an error. For example:
+```shell
+$ npm test
+
+> example-module@1.0.0 test:jest /Users/julian/dev/example-module
+> jest
+
+Error: node version v10.16.3, does not satisfy engine requirement of >=12.13.0
+```
