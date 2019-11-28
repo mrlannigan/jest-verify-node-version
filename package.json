@@ -37,6 +37,9 @@
     "dependencies": {
         "semver": "^6.3.0"
     },
+    "bundledDependencies": [
+        "@schemastore/package"
+    ],
     "devDependencies": {
         "@schemastore/package": "0.0.5",
         "@types/jest": "^24.0.23",
